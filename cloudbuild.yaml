@@ -4,4 +4,4 @@ steps:
   args: ['https://storage.googleapis.com/cloud-samples-data/bigquery/us-states/us-states.csv']
 # Load it into a BigQuery table
 - name: 'gcr.io/${PROJECT_ID}/bq'
-  args: ['query', '--use_legacy_sql=false', '< testtable1.sql']
+  args: ['query', '--use_legacy_sql=false', '"$(cat testtable1.sql)"']
