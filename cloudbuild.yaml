@@ -3,6 +3,5 @@ steps:
 - name: 'gcr.io/cloud-builders/wget'
   args: ['https://storage.googleapis.com/cloud-samples-data/bigquery/us-states/us-states.csv']
 # Load it into a BigQuery table
-- name: 'gcr.io/community-builders/bq'
+- name: 'gcr.io/${PROJECT_ID}/bq'
   args: ['query', '--use_legacy_sql=false', '< testtable1.sql']
-tags: ['cloud-builders-community']
