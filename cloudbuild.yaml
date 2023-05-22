@@ -3,5 +3,4 @@ steps:
 - name: 'gcr.io/cloud-builders/gcloud'
   entrypoint: 'bash'
   args: 
-    - ls -ltr
-    - bq query --use_legacy_sql=false < testtable1.sql
+    - bq query --use_legacy_sql=false < "SELECT 1"
