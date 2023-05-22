@@ -2,5 +2,5 @@ steps:
 # Load it into a BigQuery table
 - name: 'gcr.io/cloud-builders/gcloud'
   entrypoint: 'bash'
-  args: 
-    - ls -ltr
+  script: |
+    bq query --use_legacy_sql=false < testtable1.sql
